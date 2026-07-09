@@ -1,14 +1,12 @@
 class Solution {
     public long sumAndMultiply(int num) {
-        String n=""+num;
-        int sum=0;
-        long ans=0L;
-        for(int i=0;i<n.length();i++){
-            if((n.charAt(i)-'0')!=0){
-                ans=(ans*10)+(n.charAt(i)-'0');
-                sum+=n.charAt(i)-'0';
+        long n=0;int s=0;
+        for(char c:String.valueOf(num).toCharArray()){
+            if(c!='0'){
+                n= (n*10)+c-'0';
+                s+=c-'0';
             }
         }
-        return ans*sum;
+        return n*s;
     }
 }
