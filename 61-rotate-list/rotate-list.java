@@ -25,10 +25,10 @@ class Solution {
         for(int i=1;i<n;i++){
             newt=newt.next;
         }
-        ListNode newh=newt.next;
+        head=newt.next;
         newt.next=null;
 
-        return newh;
+        return head;
 
     }
 }
