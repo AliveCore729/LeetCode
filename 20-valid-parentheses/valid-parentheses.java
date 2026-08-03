@@ -12,6 +12,6 @@ class Solution {
                 else return false;
             }
         }
-        return st.size()>0?false:true; 
+        return st.isEmpty(); 
     }
 }
