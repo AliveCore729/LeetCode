@@ -7,8 +7,6 @@ class Solution {
             prefix[i] = prefix[i - 1] + stones[i];
         }
 
-        // dp represents the best score difference achievable
-        // by the player to move, considering cut points from i to n-1
         int dp = prefix[n - 1];
         for (int i = n - 2; i >= 1; i--) {
             dp = Math.max(dp, prefix[i] - dp);
